@@ -10,18 +10,17 @@ unpredictable_inputs = [
   false,
   { :city => "Chicago", :state => "IL", :zip => 60654 }
 ]
-var = unpredictable_inputs[1]
 # write your program below
-#unpredictable_inputs.each_with_index do |var, index|
+unpredictable_inputs.each_with_index do |var, index|
   if var.class == String || var.class == Symbol
     pp var.downcase
   elsif var.class == Time
     pp var.strftime("%A").downcase
   elsif var.class == Integer
     if var.even?
-      puts var.to_s + " is even"
+      ss var.to_s + " is even"
     else
-      puts var.to_s + " is odd"
+      ss var.to_s + " is odd"
     end
   elsif var == nil
     pp "no object provided"
