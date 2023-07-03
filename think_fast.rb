@@ -12,7 +12,7 @@ unpredictable_inputs = [
 ]
 var = unpredictable_inputs[1]
 # write your program below
-#unpredictable_inputs.each_with_index do |var, count|
+#unpredictable_inputs.each_with_index do |var, index|
   if var.class == String || var.class == Symbol
     pp var.downcase
   elsif var.class == Time
