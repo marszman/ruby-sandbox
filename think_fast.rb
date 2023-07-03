@@ -14,7 +14,7 @@ unpredictable_inputs = [
 # write your program below
 unpredictable_inputs.each_with_index do |var, count|
   if var.class == String
-    pp var
+    pp var.downcase
   elsif var.class == Time
     pp var.strftime("%A")
   elsif var.class == Integer
@@ -32,5 +32,6 @@ unpredictable_inputs.each_with_index do |var, count|
   elsif var == false
     pp "you may not pass" 
   elsif var.class == Hash
+    pp var.keys
   end
 end
