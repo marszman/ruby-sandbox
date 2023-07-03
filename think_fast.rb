@@ -11,16 +11,16 @@ unpredictable_inputs = [
   { :city => "Chicago", :state => "IL", :zip => 60654 }
 ]
 # write your program below
-unpredictable_inputs.each_with_index do |var, index|
+unpredictable_inputs.each_with_index do |var, count|
   if var.class == String || var.class == Symbol
     pp var.downcase
   elsif var.class == Time
     pp var.strftime("%A").downcase
   elsif var.class == Integer
     if var.even?
-      ss var.to_s + " is even"
+      pp var.to_s + " is even"
     else
-      ss var.to_s + " is odd"
+      pp var.to_s + " is odd"
     end
   elsif var == nil
     pp "no object provided"
@@ -31,4 +31,4 @@ unpredictable_inputs.each_with_index do |var, index|
   elsif var.class == Hash
     pp var.keys
   end
-#end
+end
